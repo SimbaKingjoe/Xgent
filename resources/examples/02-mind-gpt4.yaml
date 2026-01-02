@@ -1,0 +1,14 @@
+apiVersion: xgent.ai/v1
+kind: Mind
+metadata:
+  name: gpt4
+  description: OpenAI GPT-4 模型配置
+  labels:
+    provider: openai
+    tier: premium
+spec:
+  provider: openai
+  model_id: gpt-4
+  api_key: ${OPENAI_API_KEY}
+  temperature: 0.7
+  max_tokens: 4096

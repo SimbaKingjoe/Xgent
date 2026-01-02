@@ -1,0 +1,13 @@
+apiVersion: xgent.ai/v1
+kind: Robot
+metadata:
+  name: reviewer-bot
+  description: 代码审查机器人
+  labels:
+    role: reviewer
+    team: dev
+spec:
+  soul: code-reviewer
+  mind: gpt4
+  craft: developer-shell
+  max_history: 10

@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Xgent-Go Theme: Deep Indigo + Electric Blue */
+  --xgent-primary: 99 102 241;      /* Indigo-500 */
+  --xgent-primary-dark: 79 70 229;  /* Indigo-600 */
+  --xgent-accent: 59 130 246;       /* Blue-500 */
+  --xgent-bg: 248 250 252;          /* Slate-50 */
+  --xgent-surface: 255 255 255;
+  --xgent-text: 15 23 42;           /* Slate-900 */
+  --xgent-text-secondary: 100 116 139; /* Slate-500 */
+  --xgent-border: 226 232 240;      /* Slate-200 */
+}
+
+body {
+  color: rgb(var(--xgent-text));
+  background: linear-gradient(135deg, rgb(var(--xgent-bg)) 0%, #f1f5f9 100%);
+  min-height: 100vh;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.btn-primary {
+  @apply bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-lg transition-all duration-200 shadow-sm hover:shadow-md;
+}
+
+.btn-secondary {
+  @apply bg-slate-100 hover:bg-slate-200 text-slate-700 px-4 py-2 rounded-lg transition-all duration-200;
+}
+
+.btn-accent {
+  @apply bg-gradient-to-r from-indigo-500 to-blue-500 hover:from-indigo-600 hover:to-blue-600 text-white px-4 py-2 rounded-lg transition-all duration-200 shadow-sm hover:shadow-md;
+}
+
+.input {
+  @apply w-full px-3 py-2 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent bg-white transition-shadow duration-200;
+}
+
+.card {
+  @apply bg-white rounded-xl border border-slate-200 p-6 shadow-sm hover:shadow-md transition-shadow duration-200;
+}
+
+/* Status badges with Xgent theme */
+.badge-running {
+  @apply bg-blue-100 text-blue-700 px-2 py-1 rounded text-sm font-medium;
+}
+
+.badge-completed {
+  @apply bg-emerald-100 text-emerald-700 px-2 py-1 rounded text-sm font-medium;
+}
+
+.badge-failed {
+  @apply bg-rose-100 text-rose-700 px-2 py-1 rounded text-sm font-medium;
+}
+
+.badge-pending {
+  @apply bg-slate-100 text-slate-600 px-2 py-1 rounded text-sm font-medium;
+}

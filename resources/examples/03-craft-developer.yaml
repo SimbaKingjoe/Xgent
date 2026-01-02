@@ -1,0 +1,42 @@
+apiVersion: xgent.ai/v1
+kind: Craft
+metadata:
+  name: developer-shell
+  description: 开发者工具集
+  labels:
+    category: development
+spec:
+  tools:
+    - name: file_operations
+      type: builtin
+      enabled: true
+      config:
+        allowed_paths:
+          - /workspace
+    
+    - name: shell_executor
+      type: builtin
+      enabled: true
+      config:
+        allowed_commands:
+          - git
+          - npm
+          - go
+          - python
+        timeout: 300
+    
+    - name: code_search
+      type: builtin
+      enabled: true
+      config:
+        max_results: 50
+  
+  instructions: |
+    使用这些工具时要注意：
+    1. 操作文件前先确认路径
+    2. 执行命令前考虑安全性
+    3. 搜索代码时使用合适的关键词
+  
+  environment:
+    WORKSPACE: /workspace
+    DEFAULT_BRANCH: main

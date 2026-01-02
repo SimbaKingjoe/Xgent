@@ -1,0 +1,19 @@
+apiVersion: xgent.ai/v1
+kind: Team
+metadata:
+  name: dev-team
+  description: 开发团队 - 包含开发者、审查者和测试者
+  labels:
+    category: development
+    size: small
+spec:
+  leader: reviewer-bot
+  members:
+    - developer-bot
+    - tester-bot
+  mode: coordinate
+  description: |
+    开发团队协作模式：
+    - Leader (reviewer-bot) 负责协调和代码审查
+    - Developer 负责开发和实现功能
+    - Tester 负责测试和质量保证
