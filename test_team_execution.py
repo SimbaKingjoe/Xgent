@@ -19,7 +19,7 @@ def test_team_execution():
         "model": {
             "provider": "openai",
             "model_id": "gpt-4o-mini",
-            "api_key": "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",
+            "api_key": "user your own key",
             "base_url": "https://api.openai.com/v1"
         },
         "team": {
@@ -32,7 +32,7 @@ def test_team_execution():
                 "model": {
                     "provider": "openai",
                     "model_id": "gpt-4o-mini",
-                    "api_key": "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",
+                    "api_key": "user your own key",
                     "base_url": "https://api.openai.com/v1"
                 }
             },
@@ -43,7 +43,7 @@ def test_team_execution():
                     "model": {
                         "provider": "openai",
                         "model_id": "gpt-4o-mini",
-                        "api_key": "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",
+                        "api_key": "user your own key",
                         "base_url": "https://api.openai.com/v1"
                     }
                 }
